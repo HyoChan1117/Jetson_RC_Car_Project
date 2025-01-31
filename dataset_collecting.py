@@ -38,9 +38,9 @@ os.makedirs(BASE_DIR, exist_ok=True)
 ANGLE_BUCKETS = {
     "50_69": (50, 69),
     "70_89": (70, 89),
-    "90": (90),
+    "90": (90, 90),
     "91_110": (91, 110),
-    "111_130": (111, 130),
+    "111_130": (111, 130)
 }
 for folder_name in ANGLE_BUCKETS.keys():
     os.makedirs(os.path.join(BASE_DIR, folder_name), exist_ok=True)
