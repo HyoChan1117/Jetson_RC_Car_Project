@@ -36,11 +36,11 @@ os.makedirs(BASE_DIR, exist_ok=True)
 
 # 각도 범위에 따른 폴더 설정
 ANGLE_BUCKETS = {
-    "50_69": (50, 69),
-    "70_89": (70, 89),
+    "45_74": (45, 74),
+    "75_89": (75, 89),
     "90": (90, 90),
-    "91_110": (91, 110),
-    "111_130": (111, 130)
+    "91_105": (91, 105),
+    "106_135": (106, 135)
 }
 for folder_name in ANGLE_BUCKETS.keys():
     os.makedirs(os.path.join(BASE_DIR, folder_name), exist_ok=True)
@@ -111,7 +111,7 @@ def save_frame():
 set_servo_angle(current_angle)
 
 # 각도 변화량 설정
-ANGLE_INCREMENT = 20
+ANGLE_INCREMENT = 15
 
 # 키 입력 처리 함수
 def on_press(key):
