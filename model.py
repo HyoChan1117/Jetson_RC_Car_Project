@@ -86,11 +86,11 @@ transform = transforms.Compose([
 
 # 클래스에 따른 각도 매핑
 angle_map = {
-    0: 70,   # "45_74" 클래스
-    1: 60,   # "75_89" 클래스
+    0: 45,   # "45_74" 클래스
+    1: 65,   # "75_89" 클래스
     2: 90,   # "90" 클래스
-    3: 110,   # "91_105" 클래스
-    4: 120,   # "106_135" class
+    3: 105,   # "91_105" 클래스
+    4: 130,   # "106_135" class
 }
 
 # Jetson 설정 명령 실행
@@ -130,7 +130,7 @@ try:
         set_servo_angle(angle)
 
         # 직진 속도 유지
-        motor_forward(speed=21)
+        motor_forward(speed=55)
 
         # 결과 출력
         cv2.putText(frame, f"Angle: {angle}, Predicted: {label}", (10, 30),
